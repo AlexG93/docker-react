@@ -1,4 +1,6 @@
 sudo: required
+language: generic
+
 services:
   - docker
 
@@ -12,10 +14,10 @@ deploy:
   provider: elasticbeanstalk
   region: "eu-central-1"
   app: "frontend"
-  env: "Frontend-env"
+  env: "frontend-env"
   bucket_name: "elasticbeanstalk-eu-central-1-685180409254"
   bucket_path: "frontend"
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
-  secret_access+key: "$AWS_SECRET_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
